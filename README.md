@@ -38,8 +38,21 @@ go build -o gke
 ```
 
 4. Add executable to PATH
+   
+For local environment:
 ```bash
 sudo mv gke /usr/local/bin/
+```
+
+For Google Cloud Shell:
+```bash
+# Create Go bin directory if it doesn't exist
+mkdir -p ~/gopath/bin
+# Move the executable
+mv gke ~/gopath/bin/
+# Add to PATH if not already added
+echo 'export PATH=$PATH:~/gopath/bin' >> ~/.bashrc
+source ~/.bashrc
 ```
 
 ## Usage
